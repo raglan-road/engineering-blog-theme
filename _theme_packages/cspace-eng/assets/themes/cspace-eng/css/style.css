@@ -33,7 +33,7 @@ body {
 
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
-	display:block;
+    display:block;
 }
 
 nav ul {
@@ -103,3 +103,285 @@ input, select {
 
 /*** END HTML5 reset ***/
 /*** Being theme styles ***/
+body{    
+    color:#454545;
+    font:12px 'Trykker', serif;
+    line-height:1.5em;
+/*
+    background:
+      linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+      linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+      linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+      linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background:
+      -o-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+      -o-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+      -o-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      -o-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      -o-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+      -o-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background:
+      -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+      -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+      -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+      -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background:
+      -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+      -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+      -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+      -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424); 
+    background:
+      -ms-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+      -ms-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+      -ms-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+      -ms-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+      -ms-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+      -ms-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);   
+*/
+    background-color: #E3E3E3;
+    background-image: -moz-repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .5) 35px, rgba(255, 255, 255, .5) 70px); 
+    background-image: -webkit-repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .5) 35px, rgba(255, 255, 255, .5) 70px); 
+    background-image: -o-repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .5) 35px, rgba(255, 255, 255, .5) 70px); 
+    background-image: -ms-repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .5) 35px, rgba(255, 255, 255, .5) 70px); 
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .5) 35px, rgba(255, 255, 255, .5) 70px); 
+}
+
+a{
+    border-bottom:1px dotted #6DBCCC;
+    color:#6DBDCC;
+    text-decoration:none;
+
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;     
+}
+
+    a:hover{
+        border-bottom-color:#ED3A24;
+        text-shadow:#55909C 0 0 0;
+    }
+
+.container{
+    margin:0 auto;
+    overflow:hidden;
+    width:968px;
+
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.masthead{
+    border-bottom:4px solid #282828;
+    background:#F4F4F4;
+    height:120px;
+    position:relative;
+
+    background-image: linear-gradient(top, #999 0, #222 95%);;
+    background-image: -o-linear-gradient(top #999 0, #222 95%);;
+    background-image: -moz-linear-gradient(top #999 0, #222 95%);;
+    background-image: -webkit-linear-gradient(top, #999 0, #222 95%);;
+    background-image: -ms-linear-gradient(top, #999 0, #222 95%);;
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #999), color-stop(0.95, #222) );
+
+    -webkit-box-shadow:0px 2px 10px 4px #333;
+    -moz-box-shadow:0px 2px 10px 4px #333;
+    box-shadow:0px 2px 10px 4px #333;
+}
+
+    .masthead a{
+        border:0;
+        color:#EEE;
+        font:150% 'Oxygen', Arial, sans-serif;
+        line-height:1;
+        text-decoration:none;
+        text-shadow:#333 1px 1px 3px;       
+    }
+
+        .masthead a:hover{
+            color:#FFF;
+            text-shadow:#999 1px 1px 18px;
+        }
+
+    .masthead > .container{
+        height:100%;
+        position:relative;
+    }
+
+    .masthead .logo{
+        bottom:0;
+        height:94px;
+        left:0;
+        position:absolute;        
+        width:164px;
+    }
+
+        .logo > img{
+            height:100%;
+            width:100%;
+        }
+
+    .masthead .nav{
+        bottom:0;
+        position: absolute;
+        right:0;
+    }
+
+    .masthead .nav li{
+        float:left;
+        margin:0 8px;
+    }
+
+#content-container{
+    background:#F4F4F4;
+    padding:24px 16px;
+
+    -moz-border-radius:0 0 8px 8px;
+    -webkit-border-radius:0 0 8px 8px;
+    border-radius:0 0 8px 8px;
+
+    -webkit-box-shadow:0 0 10px 5px #CCC;
+    -moz-box-shadow:0 0 10px 5px #CCC;
+    box-shadow:0 0 10px 5px #CCC;
+}
+
+.site-footer{
+    color:#999;
+    margin-top:8px;
+}
+
+/* Homepage + post list styles */
+ul.posts{
+    list-style-type:none;    
+}
+
+    ul.posts > li{
+        margin:1em 0;
+    }
+
+    ul.posts a{
+        display:block;
+        font-family:'Oxygen', Arial, sans-serif;
+        font-size:150%;
+    }
+
+/* Post and Page styles */
+.posted-content > header{
+    font-family: 'Oxygen', Arial, sans-serif;
+    line-height:1.25;
+    margin-bottom:1.5em;
+}
+
+    .posted-content > header h1{
+        font-size:2em;     
+        margin-bottom:0.25em;   
+    }
+
+    .posted-content > header h2{
+        font-size:1.25em;
+    }
+
+    .posted-content > header p{
+        font-family:'Trykker', serif;
+        margin-top:0.25em;
+    }
+
+.tags, .pagination{
+    border:dotted #CCC;
+    border-width:1px 0;
+    margin:1em 0;
+    overflow:hidden;
+    padding:0.5em 0;
+}
+
+    .tags li{
+        background:#EFEFEF;
+        border:1px solid #E3E3E3;
+        display:inline-block;
+        list-style-type:none;
+        margin:0 0.5em;
+        padding:0.25em;
+
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-radius:4px;       
+    }
+
+    .pagination li{
+        display:inline-block;
+    }
+
+        .pagination li:after{
+            content:"|";
+            margin:0 8px;
+        }
+
+            .pagination li:last-child:after{
+                content:"";
+                margin:0;
+            }
+
+    .tags a, .pagination a{
+        font-size:0.85em;
+        font-variant:small-caps;
+        text-transform:uppercase;
+    }
+
+/* Body content! */
+.body{
+    font-size:13px;
+    line-height:1.5;
+}
+
+.body h1, .body h2, .body h3, .body h4, .body h5, .body h6{
+    font-family: 'Oxygen', Arial, sans-serif;
+}
+
+.body h1{
+    font-size:1.75em;
+}
+
+.body h2{
+    font-size:1.5em;
+}
+
+.body h3{
+    font-size:1.25em;
+}
+
+.body h4{
+    font-size:1.1em;
+}
+
+.body h5{
+    font-size:1.05em;
+}
+
+.body ul, .body ol, .body p{
+    margin:1em 0;
+}
+
+.body ul, .body ol{
+    margin-left:1.5em;
+}
+
+.body li{
+    margin:0.5em 0;
+}
+
+.body table{
+    border:1px solid #E3E3E3;
+    border-collapse:collapse;
+}
+
+/* Miscellaneous styles */
+.disabled{
+    filter:alpha(opacity=45);
+    opacity:0.45;
+}
