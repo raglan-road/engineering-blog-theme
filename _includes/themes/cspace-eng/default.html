@@ -21,7 +21,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Trykker|Oxygen&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="{{ ASSET_PATH }}/js/lib/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" media="screen, print">
 </head>
 <body>
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -52,18 +52,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     {% include JB/analytics %}
 
-    <!-- Include SyntaxHighlighter to pretty up code snippets -->
-    <script src="{{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-    <script src="{{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
+    <!-- Include Google Code Prettify to pretty up code snippets -->
+    <script src="{{ ASSET_PATH }}/js/lib/google-code-prettify/prettify.js"></script>
     <script type="text/javascript">
-        SyntaxHighlighter.autoloader(
-            'js jscript javascript {{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/shBrushJScript.js',
-            'css {{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/shBrushCss.js',
-            'c# csharp c-sharp {{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/shBrushCSharp.js',
-            'java {{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/shBrushJava.js',
-            'sql mssql {{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/shBrushSql.js',
-            'xml html xhtml html5 {{ ASSET_PATH }}/js/lib/syntaxhighlighter_3.0.83/shBrushXml.js'
-        );
+        $(window).load(function(){
+            prettyPrint();
+        });
     </script>
 </body>
 </html>
