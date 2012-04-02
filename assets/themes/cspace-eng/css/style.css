@@ -107,43 +107,7 @@ body{
     color:#454545;
     font:12px 'Trykker', serif;
     line-height:1.5em;
-/*
-    background:
-      linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
-      linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
-      linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
-      linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
-      linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
-      linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background:
-      -o-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
-      -o-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
-      -o-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
-      -o-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
-      -o-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
-      -o-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background:
-      -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
-      -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
-      -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
-      -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
-      -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
-      -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background:
-      -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
-      -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
-      -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
-      -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
-      -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
-      -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424); 
-    background:
-      -ms-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
-      -ms-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
-      -ms-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
-      -ms-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
-      -ms-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
-      -ms-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);   
-*/
+
     background-color: #E3E3E3;
     background-image: -moz-repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .5) 35px, rgba(255, 255, 255, .5) 70px); 
     background-image: -webkit-repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .5) 35px, rgba(255, 255, 255, .5) 70px); 
@@ -170,12 +134,36 @@ a{
 .container{
     margin:0 auto;
     overflow:hidden;
-    width:968px;
+    width:100%;
 
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
 }
+
+    @media screen and (min-width: 640px){
+        .container{
+            width:600px;
+        }
+    }
+
+    @media screen and (min-width: 800px){
+        .container{
+            width:720px;
+        }
+    }
+
+    @media screen and (min-width: 1024px){
+        .container{
+            width:968px;
+        }
+    }
+
+    @media screen and (min-width: 1280px){
+        .container{
+            width:1200px;
+        }
+    }    
 
 .masthead{
     border-bottom:4px solid #282828;
@@ -198,11 +186,17 @@ a{
     .masthead a{
         border:0;
         color:#EEE;
-        font:150% 'Oxygen', Arial, sans-serif;
+        font:125% 'Oxygen', Arial, sans-serif;
         line-height:1;
         text-decoration:none;
         text-shadow:#333 1px 1px 3px;       
     }
+
+        @media screen and (min-width: 640px){
+            .masthead a{
+                font-size:150%;
+            }
+        }    
 
         .masthead a:hover{
             color:#FFF;
@@ -227,11 +221,18 @@ a{
             width:100%;
         }
 
-    .masthead .nav{
-        bottom:0;
-        position: absolute;
+    .masthead nav{
+        position: absolute;        
         right:0;
+        top:0;
     }
+
+        @media screen and (min-width: 480px){
+            .masthead nav{
+                bottom:0;
+                top:auto;
+            }
+        }    
 
     .masthead .nav li{
         float:left;
@@ -301,17 +302,22 @@ ul.posts{
 }
 
     .tags li{
-        background:#EFEFEF;
-        border:1px solid #E3E3E3;
         display:inline-block;
         list-style-type:none;
         margin:0 0.5em;
-        padding:0.25em;
-
-        -moz-border-radius:4px;
-        -webkit-border-radius:4px;
-        border-radius:4px;       
     }
+
+        @media screen and (min-width: 640px){
+            .tags li{
+                background:#EFEFEF;
+                border:1px solid #E3E3E3;
+                padding:0.25em;
+
+                -moz-border-radius:4px;
+                -webkit-border-radius:4px;
+                border-radius:4px;       
+            }
+        }    
 
     .pagination li{
         display:inline-block;
@@ -403,11 +409,18 @@ ul.posts{
     }
 
     ul.homepage-post-list li{
-        display:inline-block;
-        margin:1em 2.5%;
-        vertical-align:top;
-        width:45%;
+        display:block;
+        margin:1em 0;
     }
+
+        @media screen and (min-width: 640px){
+            ul.homepage-post-list li{
+                display:inline-block;
+                margin:1em 2%;
+                vertical-align:top;
+                width:44%;
+            }
+        }
 
 /* Miscellaneous styles */
 .disabled{
