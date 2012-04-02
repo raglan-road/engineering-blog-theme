@@ -380,6 +380,30 @@ ul.posts{
     border-collapse:collapse;
 }
 
+/* Homepage Post list */
+.homepage-post-list{
+    overflow:hidden;
+}
+
+    .homepage-post-list h1{
+        font-size:1.5em;
+    }
+
+    .homepage-post-list .body{
+        font-size:1.25em;
+    }
+
+    .homepage-post-list footer{
+        font-size:0.85em;
+    }
+
+    ul.homepage-post-list li{
+        display:inline-block;
+        margin:1em 2.5%;
+        vertical-align:top;
+        width:45%;
+    }
+
 /* Miscellaneous styles */
 .disabled{
     filter:alpha(opacity=45);
